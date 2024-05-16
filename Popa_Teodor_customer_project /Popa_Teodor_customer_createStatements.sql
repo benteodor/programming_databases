@@ -1,26 +1,21 @@
--- Create the database
-CREATE DATABASE IF NOT EXISTS customerdb;
+create database customerdb;
 
--- Switch to the customerdb database
-USE customerdb;
+use customerdb;
 
--- Create the customer table
-CREATE TABLE IF NOT EXISTS customer (
-    customerId INT AUTO_INCREMENT PRIMARY KEY,
-    firstname VARCHAR(7) NOT NULL,
-    lastname VARCHAR(10) NOT NULL,
-    customerclass VARCHAR(28) NOT NULL,
-    favouriteIceCream VARCHAR(12) NOT NULL
+create table customer (
+    customerId int auto_increment primary key,
+    firstname varchar(7) not null,,
+    lastname varchar(10) not null,
+    customerclass varchar(28) not null,
+    favouriteIceCream varchar(12) not null
 );
 
--- Insert test data into the customer table
-INSERT INTO customer (firstname, lastname, customerclass, favouriteIceCream) VALUES 
-('John', 'Doe', 'Premium', 'Chocolate'),
+insert into customer values
+('John', 'Doe', 'Premium', 'Chocolate');
+insert into customer values
 ('Jane', 'Smith', 'Regular', 'Vanilla');
 
--- Create user 'hugo'@'localhost' with password '2hWyZmJC'
-CREATE USER 'hugo'@'localhost' IDENTIFIED BY '2hWyZmJC';
+create user 'hugo'@'localhost' identified by '2hWyZmJC';
 
--- Grant necessary privileges to the user
-GRANT ALL PRIVILEGES ON customerdb.* TO 'hugo'@'localhost';
+grant all privileges on customerdb.* to 'hugo'@'localhost';
 

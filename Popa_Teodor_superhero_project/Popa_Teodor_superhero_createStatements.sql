@@ -1,25 +1,22 @@
--- Create the database
-CREATE DATABASE IF NOT EXISTS superherodb;
+create database superherodb;
 
--- Switch to the newly created database
-USE superherodb;
+use superherodb;
 
--- Create the superhero table
-CREATE TABLE IF NOT EXISTS superhero (
-    heroID INTEGER PRIMARY KEY,
-    name VARCHAR(13) NOT NULL,
-    yearOfBirth INTEGER NOT NULL,
-    superproperty VARCHAR(30) NOT NULL,
-    gear VARCHAR(25) NOT NULL
+create table superhero (
+    heroID integer primary key,
+    name varchar(13) not null,
+    yearOfBirth integer not null,
+    superproperty varchar(30) not null,
+    gear varchar(25) not null
 );
 
--- Insert test data
-INSERT INTO superhero (heroID, name, yearOfBirth, superproperty, gear) VALUES 
+insert into superhero values  
 (1, 'Superman', 1938, 'Super Strength', 'Cape'),
+insert into superhero values  
 (2, 'Batman', 1939, 'Intelligence', 'Batsuit');
 
--- Create user and grant privileges
-CREATE USER 'ava'@'localhost' IDENTIFIED BY 'KAEZM4Ls';
-GRANT ALL PRIVILEGES ON superherodb.* TO 'ava'@'localhost';
-FLUSH PRIVILEGES;
+create user 'ava'@'localhost' identified by 'KAEZM4Ls';
+
+grant all privileges on superherodb.* to 'ava'@'localhost';
+
 

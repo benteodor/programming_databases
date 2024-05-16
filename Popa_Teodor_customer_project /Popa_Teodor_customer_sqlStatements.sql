@@ -1,24 +1,8 @@
--- Inserting data into the customer table
-INSERT INTO customer (firstname, lastname, customerclass, favouriteIceCream) VALUES 
-('John', 'Doe', 'Premium', 'Chocolate'),
-('Jane', 'Smith', 'Regular', 'Vanilla');
+use customerdb;
 
--- Check the content of the customer table
-SELECT * FROM customer;
+truncate customer;
 
-
--- Deleting data from the customer table
-DELETE FROM customer WHERE customerId = 2;
-
--- Check the content of the customer table
-SELECT * FROM customer;
-
-
--- Selecting all data from the customer table
-SELECT * FROM customer;
-
--- Insert data into the customer table
-INSERT INTO customer (customerId, firstname, lastname, customerclass, favouriteIceCream) VALUES 
+insert into customer (customerId, firstname, lastname, customerclass, favouriteIceCream) values
 (3000, 'Abel', 'River', 'R.I.P', 'blueberry'),
 (6543, 'Olivia', 'Garcia', 'SolidGold', 'strawberry'),
 (5000, 'Sophie', 'Smith', 'VIP', 'toffee'),
@@ -28,23 +12,25 @@ INSERT INTO customer (customerId, firstname, lastname, customerclass, favouriteI
 (7987, 'Matt', 'Hammer', 'ToBeAwoided', 'vanilla');
 
 
-SELECT * FROM customer;
-SELECT lastname, customerclass, customerId FROM customer;
-SELECT * FROM customer WHERE firstname = 'Matt';
-SELECT * FROM customer WHERE favouriteIceCream = 'toffee';
-SELECT * FROM customer WHERE customerclass = 'VIP';
+select * from customer;
 
-UPDATE customer SET customerclass = 'KeyCustomer', favouriteIceCream = 'raspberry' WHERE customerId = 2000;
-UPDATE customer SET favouriteIceCream = 'blueberry', customerclass = 'R.I.P' WHERE customerId = 1000;
-UPDATE customer SET favouriteIceCream = 'toffee', lastname = 'Hammer', firstname = 'Olivia' WHERE customerId = 2000;
-UPDATE customer SET favouriteIceCream = 'caramel', firstname = 'Sophie', customerclass = 'KeyCustomer' WHERE customerId = 4123;
+select lastname, customerclass, customerId from customer;
+
+select * from customer where firstname = 'Matt';
+select * from customer where favouriteIceCream = 'toffee';
+select * from customer where customerclass = 'VIP';
+
+update customer set customerclass = 'KeyCustomer', favouriteIceCream = 'raspberry' where customerId = 2000;
+update customer set favouriteIceCream = 'blueberry', customerclass = 'R.I.P' where customerId = 1000;
+update customer set favouriteIceCream = 'toffee', lastname = 'Hammer', firstname = 'Olivia' where customerId = 2000;
+update customer set favouriteIceCream = 'caramel', firstname = 'Sophie', customerclass = 'KeyCustomer' where customerId = 4123;
 
 
-DELETE FROM customer WHERE customerId = 7987;
-DELETE FROM customer WHERE customerId = 5000;
-DELETE FROM customer WHERE favouriteIceCream = 'chocolate';
-DELETE FROM customer WHERE firstname = 'Layla' OR firstname = 'Matt';
-DELETE FROM customer WHERE lastname = 'Irony' OR favouriteIceCream = 'raspberry' OR lastname = 'Smith';
+delete from customer where customerId = 7987;
+delete from customer where customerId = 5000;
+delete from customer where favouriteIceCream = 'chocolate';
+delete from customer where firstname = 'Layla' or firstname = 'Matt';
+detele from customer where lastname = 'Irony' or favouriteIceCream = 'raspberry' or lastname = 'Smith';
 
 
 
