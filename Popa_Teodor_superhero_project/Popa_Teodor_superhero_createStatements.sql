@@ -11,9 +11,9 @@ create table superhero (
 );
 
 insert into superhero values  
-(1, 'Superman', 1938, 'Super Strength', 'Cape'),
+(1, 'Ninja', 1988, 'Super Fast', 'Batsuit'),
 insert into superhero values  
-(2, 'Batman', 1939, 'Intelligence', 'Batsuit');
+(2, 'Spiderman', 1979, 'Super Strong', 'Cap');
 
 create user 'ava'@'localhost' identified by 'KAEZM4Ls';
 

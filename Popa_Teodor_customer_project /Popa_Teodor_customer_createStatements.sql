@@ -11,9 +11,9 @@ create table customer (
 );
 
 insert into customer values
-('John', 'Doe', 'Premium', 'Chocolate');
+('Teo', 'Catalin', 'Premium', 'Strawberry');
 insert into customer values
-('Jane', 'Smith', 'Regular', 'Vanilla');
+('Marius', 'Popa', 'Regular', 'Chocolate');
 
 create user 'hugo'@'localhost' identified by '2hWyZmJC';
 

@@ -30,7 +30,7 @@ delete from customer where customerId = 7987;
 delete from customer where customerId = 5000;
 delete from customer where favouriteIceCream = 'chocolate';
 delete from customer where firstname = 'Layla' or firstname = 'Matt';
-detele from customer where lastname = 'Irony' or favouriteIceCream = 'raspberry' or lastname = 'Smith';
+delete from customer where lastname = 'Irony' or favouriteIceCream = 'raspberry' or lastname = 'Smith';
 
 
 
